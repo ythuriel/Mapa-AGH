@@ -1,5 +1,6 @@
 package com.example.ythuriel.test;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -18,6 +19,7 @@ import com.google.android.gms.maps.model.PolygonOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
 
     private GoogleMap mMap;
+    private Marker B2m;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {    //to jest wszystko domyslnie tego nie tykac
@@ -53,7 +55,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(AGH,(float)16));  //a tu przesuwa kamere i przybliza troche
 
 
-        Marker B2m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066261,19.918879)).title("B2"));//tu trza dodac markery do wszystkich budynkow ktore nas obchodza
+        B2m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066261,19.918879)).title("B2"));//tu trza dodac markery do wszystkich budynkow ktore nas obchodza
 
         Polygon AGH_T = googleMap.addPolygon(new PolygonOptions().clickable(true).add(new LatLng(50.063904, 19.923582),new LatLng(50.067424, 19.903177),new LatLng(50.070055, 19.903992),new LatLng(50.068896, 19.911477),new LatLng(50.067650, 19.914509),new LatLng(50.067591, 19.918087),new LatLng(50.065897, 19.924365)));
         AGH_T.setTag("Teren AGH");
@@ -66,6 +68,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public boolean onMarkerClick(Marker marker) {
         {
             //tu bedzie wyswietlanie mapy budynku
+            if (marker.equals(B2m)){
+                System.out.println("klikniecie");
+                startActivity(new Intent(getApplicationContext(),Floor_View.class));
+            }
         }
         return false;
     }
