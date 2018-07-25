@@ -18,7 +18,7 @@ import com.google.android.gms.maps.model.PolygonOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener,GoogleMap.OnInfoWindowClickListener{
 
     private GoogleMap mMap;
-    private Marker B2m;
+    private Marker B2m,D17m;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {    //to jest wszystko domyslnie tego nie tykac
@@ -55,7 +55,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         B2m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066261,19.918879)).title("B2").snippet("WIMiR"));//tu trza dodac markery do wszystkich budynkow ktore nas obchodza
-
+        D17m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.068049, 19.912669)).title("D17").snippet("WIEiT"));
+        
         Polygon AGH_T = googleMap.addPolygon(new PolygonOptions().clickable(true).add(new LatLng(50.063904, 19.923582),new LatLng(50.067424, 19.903177),new LatLng(50.070055, 19.903992),new LatLng(50.068896, 19.911477),new LatLng(50.067650, 19.914509),new LatLng(50.067591, 19.918087),new LatLng(50.065897, 19.924365)));
         AGH_T.setTag("Teren AGH");
 
