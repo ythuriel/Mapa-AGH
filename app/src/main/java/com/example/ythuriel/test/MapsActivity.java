@@ -18,8 +18,11 @@ import com.google.android.gms.maps.model.PolygonOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener,GoogleMap.OnInfoWindowClickListener{
 
     private GoogleMap mMap;
-    private Marker B2m,D17m;
-
+    private Marker B2m,D17m,A0m,A1m,A2m,A3m,A4m,B1m,B3m,B4m,B5m,B6m,B7m,B8m,C1m,C2m,C3m,C4m,C5m,C6m,D1m,U2m,U1m,D4m,D5m,D6m,D7m,D8m,D9m,D10m;
+    private Marker D11m,D12m,D14m,D13m,D15m,D16m,D18m,HA1m,HA2m,HB1B2m,HB3B4m,HB6m,HD8m,PA0A1m,PA1A2m,PA1C1m,PA3A4m,PA4C4m,PB1B2m,PB2B3m;
+    private Marker PB3B4m,S1m,S2m,U3m,U5m,U6m,U7m,U8m,U9m,U10m,U11m,U12m,Z1m,Z2m,Z11m,Z13m,Z14m,Z15m,Z16m,Z17m,Z18m,DSAm,DS1m,DS2m,DS3m;
+    private Marker DS3m,DS4m,DS5m,DS6m,DS7m,DS8m,DS9m,DS10m,DS11m,DS12m,DS13m,DS14m,DS15m,DS16m,DS17m,DS18m,DS19m,P1m;
+        
     @Override
     protected void onCreate(Bundle savedInstanceState) {    //to jest wszystko domyslnie tego nie tykac
         super.onCreate(savedInstanceState);
