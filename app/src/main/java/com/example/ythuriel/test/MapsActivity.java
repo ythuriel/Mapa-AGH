@@ -12,11 +12,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.PointOfInterest;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener,GoogleMap.OnInfoWindowClickListener{
 
     private GoogleMap mMap;
     private Marker B2m;
@@ -55,25 +54,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(AGH,(float)16));  //a tu przesuwa kamere i przybliza troche
 
 
-        B2m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066261,19.918879)).title("B2"));//tu trza dodac markery do wszystkich budynkow ktore nas obchodza
+        B2m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066261,19.918879)).title("B2").snippet("WIMiR"));//tu trza dodac markery do wszystkich budynkow ktore nas obchodza
 
         Polygon AGH_T = googleMap.addPolygon(new PolygonOptions().clickable(true).add(new LatLng(50.063904, 19.923582),new LatLng(50.067424, 19.903177),new LatLng(50.070055, 19.903992),new LatLng(50.068896, 19.911477),new LatLng(50.067650, 19.914509),new LatLng(50.067591, 19.918087),new LatLng(50.065897, 19.924365)));
         AGH_T.setTag("Teren AGH");
 
 
         mMap.setOnMarkerClickListener(this);    //to bedzie do obslugi klikniecia w ktorys z naszych markerow
+        mMap.setOnInfoWindowClickListener(this);    //i obsluga klikniecia w dymek nad nim
     }
 
     @Override
-    public boolean onMarkerClick(Marker marker) {
-        {
-            //tu bedzie wyswietlanie mapy budynku
-            if (marker.equals(B2m)){
-                System.out.println("klikniecie");
-                startActivity(new Intent(getApplicationContext(),Floor_View.class));
-            }
-        }
+    public boolean onMarkerClick(Marker marker) {   //to tylko po to zeby obsluzyc klikniecia ale return false sprawia ze uzywane sa domyslne funkcje
         return false;
     }
 
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        //if (marker.equals(B2m)) {
+            Intent i = new Intent(getApplicationContext(),Floor_View.class);
+            i.putExtra("budynek",marker.getTitle());    //przekazywanie do przegladarki planow jaki budynek ma byc przegladany
+            startActivity(i);
+    }
 }
