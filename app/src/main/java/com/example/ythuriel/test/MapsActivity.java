@@ -61,27 +61,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         D17m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.068049, 19.912669)).title("D17").snippet("WIEiT"));
         //A
         A0m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("A0").snippet("Gmach Glowny A-0"));
-        A1m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("A1").snippet("Pawilon A1"));
-        A2m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("A2").snippet("Pawilon A2"));
-        A3m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("A3").snippet("Pawilon A3"));
-        A4m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("A4").snippet("Pawilon A4"));
+        A1m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.065120, 19.922520)).title("A1").snippet("Pawilon A1"));
+        A2m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.065249, 19.921876)).title("A2").snippet("Pawilon A2"));
+        A3m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.065317, 19.920921)).title("A3").snippet("Pawilon A3"));
+        A4m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.065522, 19.920034)).title("A4").snippet("Pawilon A4"));
         //B
-        B1m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("B1").snippet("Pawilon B1"));
-        B3m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("B3").snippet("Pawilon B3"));
-        B4m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("B4").snippet("Pawilon B4"));
-        B5m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("B5").snippet("Pawilon B5"));
-        B6m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("B6").snippet("Pawilon B6"));
-        B7m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("B7").snippet("Pawilon B7"));
-        B8m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("B8").snippet("Pawilon B8"));
+        B1m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.065828, 19.919374)).title("B1").snippet("Pawilon B1"));
+        B3m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066116, 19.918173)).title("B3").snippet("Pawilon B3"));
+        B4m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066256, 19.917578)).title("B4").snippet("Pawilon B4"));
+        B5m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.067122, 19.917115)).title("B5").snippet("Pawilon B5"));
+        B6m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066280, 19.916502)).title("B6").snippet("Pawilon B6"));
+        B7m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.067209, 19.916496)).title("B7").snippet("Pawilon B7"));
+        B8m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.065900, 19.916818)).title("B8").snippet("Pawilon B8"));
         //C
-        C1m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("C1").snippet("Pawilon C1"));
-        C2m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("C2").snippet("Pawilon C2"));
-        C3m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("C3").snippet("Pawilon C3"));
-        C4m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("C4").snippet("Pawilon C4"));
-        C5m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("C5").snippet("Pawilon C5"));
-        C6m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("C6").snippet("Pawilon C6"));
+        C1m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.065281, 19.922860)).title("C1").snippet("Pawilon C1"));
+        C2m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.065943, 19.922688)).title("C2").snippet("Pawilon C2"));
+        C3m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066174, 19.921906)).title("C3").snippet("Pawilon C3"));
+        C4m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.065679, 19.920129)).title("C4").snippet("Pawilon C4"));
+        C5m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066573, 19.921131)).title("C5").snippet("Pawilon C5"));
+        C6m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.066357, 19.920530)).title("C6").snippet("Pawilon C6"));
         //D
-        D1m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("D1").snippet("Pawilon Wibroakustyki"));
+        D1m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064835, 19.919494)).title("D1").snippet("Pawilon Wibroakustyki"));
+        //progress
         D4m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("D4").snippet("Gmach Glowny A-0"));
         D5m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("D5").snippet("Pawilon Telekomunikacji"));
         D6m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("D6").snippet("Pawilon Telekomunikacji"));
