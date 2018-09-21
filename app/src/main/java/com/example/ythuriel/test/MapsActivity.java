@@ -159,9 +159,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         DS18m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("DS-18").snippet("DS-18"));
         DS19m = mMap.addMarker(new MarkerOptions().position(new LatLng(50.064530, 19.923460)).title("DS-19").snippet("DS-19"));
 
-
-
-
         Polygon AGH_T = googleMap.addPolygon(new PolygonOptions().clickable(true).add(new LatLng(50.063904, 19.923582),new LatLng(50.067424, 19.903177),new LatLng(50.070055, 19.903992),new LatLng(50.068896, 19.911477),new LatLng(50.067650, 19.914509),new LatLng(50.067591, 19.918087),new LatLng(50.065897, 19.924365)));
         AGH_T.setTag("Teren AGH");
 
